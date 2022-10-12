@@ -1,0 +1,23 @@
+Requisitos
+• CRUD de cliente, incluindo clientes dependentes.
+• Listagem de clientes dependentes para um titular específico.
+• Listagem do titular para o cliente dependente específico.
+
+
+O que está faltando ?
+
+- Cliente/Titular
+
+    - Buscar por id
+    - buscar dependentes
+    - Editar
+    - Excluir
+
+- Dependente
+
+    - Criar
+    - Buscar todos
+    - Buscar titular
+    - Buscar por id
+    - Editar
+    - Excluir

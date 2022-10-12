@@ -21,3 +21,12 @@ O que está faltando ?
     - Buscar por id
     - Editar
     - Excluir
+
+- Telefone
+
+    - Cadastrar telefone
+
+- Documentos
+
+    - Cadastrar rg
+    - Cadastrar passaporte

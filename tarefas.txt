@@ -24,7 +24,7 @@ O que está faltando ?
 
 - Telefone
 
-    - Cadastrar telefone
+    - Cadastrar telefone             *Finalizado
 
 - Documentos
 

@@ -24,9 +24,9 @@ O que está faltando ?
 
 - Telefone
 
-    - Cadastrar telefone             *Finalizado
+    - Cadastrar telefone                *Finalizado
 
 - Documentos
 
-    - Cadastrar rg
-    - Cadastrar passaporte
+    - Cadastrar cpf                     *Finalizado
+    - Cadastrar passaporte              *Finalizado

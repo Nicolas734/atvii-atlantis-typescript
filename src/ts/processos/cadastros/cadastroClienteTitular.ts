@@ -1,7 +1,7 @@
 import Processo from "../../abstracoes/processo";
 import Armazem from "../../dominio/armazem";
 import Cliente from "../../modelos/cliente";
-import CadastrarDocumentosCliente from "./cadastrarDocumentosCliente";
+import CadastrarDocumentosCliente from "./documento/cadastrarDocumentosCliente";
 import CadastroEnderecoTitular from "./cadastroEnderecoTitular";
 import CadastroTelefoneTitular from "./cadastroTelefoneTitular";
 

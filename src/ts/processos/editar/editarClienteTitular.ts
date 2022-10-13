@@ -1,14 +1,14 @@
 import Processo from "../../abstracoes/processo";
-import MenuOpcaoDocumentoBuscaCliente from "../../menus/menuOpcaoDocumentoBuscaCliente";
+import MenuOpcaoDocumentoBuscaCliente from "../../menus/menusEditar/menuOpcaoDocumentoBuscaCliente";
 
 export default class EditarClienteTitular extends Processo{
     processar(): void {
         this.menu = new MenuOpcaoDocumentoBuscaCliente()
-        this.menu.mostrar()
-
         this.execucao = true
 
         while(this.execucao){
+
+            this.menu.mostrar()
             this.opcao = this.entrada.receberNumero('Qual opção desejada?')
 
             switch(this.opcao){

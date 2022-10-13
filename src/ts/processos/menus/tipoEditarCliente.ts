@@ -20,5 +20,5 @@ export default class TipoEditarCliente extends Processo{
                 console.log('Operação não entendida.');
         }
     }
-    
+
 }

@@ -10,6 +10,7 @@ export default class Principal extends Processo {
         this.execucao = true
         this.menu = new MenuPrincipal()
     }
+    
     processar(): void {
         this.menu.mostrar()
         this.opcao = this.entrada.receberNumero('Qual opção desejada?')

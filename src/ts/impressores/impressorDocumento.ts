@@ -12,7 +12,8 @@ export default class ImpressorDocumento implements Impressor {
         let impressao = `| Documento:\n`
             + `| Tipo: ${this.documento.Tipo}\n`
             + `| Data expedição: ${this.documento.DataExpedicao.toLocaleDateString()}\n`
-            + `| Número: ${this.documento.Numero}`
+            + `| Número: ${this.documento.Numero}\n`
+            + `|`
         return impressao
     }
 

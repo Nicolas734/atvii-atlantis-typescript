@@ -10,7 +10,7 @@ O que está faltando ?
 
     - Buscar por id
     - buscar dependentes
-    - Editar
+    - Editar                            *Finalizado
     - Excluir
 
 - Dependente

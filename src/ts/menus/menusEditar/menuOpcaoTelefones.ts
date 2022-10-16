@@ -2,7 +2,7 @@ import Menu from "../../interfaces/menu";
 
 export default class MenuOpcaoTelefones implements Menu{
     mostrar(): void {
-        console.clear()
+        // console.clear()
         console.log(`****************************`)
         console.log(`| Escolha o que deseja atualizar? `)
         console.log(`----------------------`)

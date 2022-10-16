@@ -2,6 +2,9 @@ import Processo from "../../abstracoes/processo";
 import Cliente from "../../modelos/cliente";
 import MenuOpcaoEditar from '../../menus/menusEditar/menuOpcaoEditar';
 import EditarDadosCliente from "./editarDadosCliente";
+import EditarTelefoneCliente from "./editarTelefoneCliente";
+import EditarEnderecoCliente from "./editarEnderecoCliente";
+import EditarDocumentoCliente from "./editarDocumentoCliente";
 
 export default class EditarTitularOpcao extends Processo{
     private cliente:Cliente
@@ -26,13 +29,16 @@ export default class EditarTitularOpcao extends Processo{
                     this.processo.processar()
                     break
                 case 2:
-                    console.log(1);
+                    this.processo = new EditarTelefoneCliente(this.cliente)
+                    this.processo.processar()
                     break
                 case 3:
-                    console.log(1);
+                    this.processo = new EditarEnderecoCliente(this.cliente)
+                    this.processo.processar()
                     break
                 case 4:
-                    console.log(1);
+                    this.processo = new EditarDocumentoCliente(this.cliente)
+                    this.processo.processar()
                     break
                 case 0:
                     this.execucao = false

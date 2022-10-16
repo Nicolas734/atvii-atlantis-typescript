@@ -1,17 +1,17 @@
 import Processo from "../../abstracoes/processo";
 import ImpressorCliente from "../../impressores/impressorCliente";
 import Impressor from "../../interfaces/impressor";
-import MenuOpcaoTelefones from "../../menus/menusEditar/menuOpcaoTelefones";
+import MenuOpcaoDocumento from "../../menus/menusEditar/menuOpcaoDocumento";
 import Cliente from "../../modelos/cliente";
 
-export default class EditarTelefoneCliente extends Processo{
-    private cliente: Cliente
-    private impressor!: Impressor
+export default class EditarDocumentoCliente extends Processo{
+    private cliente:Cliente
+    private impressor!:Impressor
 
     constructor(cliente:Cliente){
         super()
         this.cliente = cliente
-        this.menu = new MenuOpcaoTelefones()
+        this.menu = new MenuOpcaoDocumento()
         this.execucao = true
     }
 
@@ -20,11 +20,11 @@ export default class EditarTelefoneCliente extends Processo{
         this.impressor = new ImpressorCliente(this.cliente)
         console.log(this.impressor.imprimir())
 
-        let telefone = this.entrada.receberTexto('Qual o telefone que deseja atualizar? ')
-        let telefoneSelecionado = this.cliente.Telefones.find((tel) => tel.Numero === telefone )
+        let numeroDocumento = this.entrada.receberTexto('Qual o numero do documento que deseja atualizar?')
+        let documento = this.cliente.Documentos.find((doc) => numeroDocumento === doc.Numero)
 
-        if(!telefoneSelecionado){
-            console.log('Telefone não encontrado');
+        if(!documento){
+            console.log('Documento não encontrado');
         }else{
             while(this.execucao){
 
@@ -33,12 +33,12 @@ export default class EditarTelefoneCliente extends Processo{
 
                 switch(this.opcao){
                     case 1:
-                        let novoDdd: string = this.entrada.receberTexto('Digite o novo ddd: ')
-                        telefoneSelecionado.setDDD = novoDdd
+                        let novoNumero = this.entrada.receberTexto(`Digite o novo numero do ${documento.Tipo}: `)
+                        documento.setNumero = novoNumero
                         break
                     case 2:
-                        let novoNumero: string = this.entrada.receberTexto('Digite o novo numero: ')
-                        telefoneSelecionado.setNumero = novoNumero
+                        let novaDataExpedicao = this.entrada.receberData(`Digite a nova data de expedição do ${documento.Tipo}: `)
+                        documento.setDataExpedicao = novaDataExpedicao
                         break
                     case 0:
                         this.execucao = false
@@ -49,5 +49,4 @@ export default class EditarTelefoneCliente extends Processo{
             }
         }
     }
-
 }

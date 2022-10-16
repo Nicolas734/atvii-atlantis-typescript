@@ -1,5 +1,5 @@
 import Processo from "../../abstracoes/processo";
-import ImpressaorCliente from "../../impressores/impressorCliente";
+import ImpressorCliente from "../../impressores/impressorCliente";
 import Impressor from "../../interfaces/impressor";
 import MenuOpcaoDadosCliente from "../../menus/menusEditar/menuOpcaoDadosCliente";
 import Cliente from "../../modelos/cliente";

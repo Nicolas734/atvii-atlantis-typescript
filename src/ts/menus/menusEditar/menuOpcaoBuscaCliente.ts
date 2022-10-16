@@ -7,7 +7,7 @@ export default class MenuOpcaoBuscaCliente implements Menu{
         console.log(`| Selecione uma opção ? `)
         console.log(`----------------------`)
         console.log(`| 1 - Listar Clientes`)
-        console.log(`| 2 - Buscar Cliente`)
+        console.log(`| 2 - Buscar Cliente para editar`)
         console.log(`| 0 - Voltar`)
         console.log(`----------------------`)
     }

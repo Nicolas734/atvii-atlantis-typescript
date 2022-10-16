@@ -11,14 +11,10 @@ export default class Documento {
         this.dataExpedicao = dataExpedicao
     }
 
-    public get Numero(){
-        return this.numero
-    }
-    public get Tipo(){
-        return this.tipo
-    }
-    public get DataExpedicao(){
-        return this.dataExpedicao
-    }
+    public get Numero(){ return this.numero }
+    public get Tipo(){ return this.tipo }
+    public get DataExpedicao(){ return this.dataExpedicao }
     
+    public set setNumero(numero:string){ this.numero = numero }
+    public set setDataExpedicao(dataExpedicao:Date){ this.dataExpedicao = dataExpedicao }
 }

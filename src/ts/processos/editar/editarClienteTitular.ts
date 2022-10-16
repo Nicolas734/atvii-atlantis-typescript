@@ -1,9 +1,11 @@
 import Processo from "../../abstracoes/processo";
-import MenuOpcaoDocumentoBuscaCliente from "../../menus/menusEditar/menuOpcaoDocumentoBuscaCliente";
+import MenuOpcaoBuscaCliente from "../../menus/menusEditar/menuOpcaoBuscaCliente";
+import BuscarTitularPorDocumento from "../buscarTitularPorDocumento";
+import ListagemTitulares from "../listagens/listagemTitulares";
 
 export default class EditarClienteTitular extends Processo{
     processar(): void {
-        this.menu = new MenuOpcaoDocumentoBuscaCliente()
+        this.menu = new MenuOpcaoBuscaCliente()
         this.execucao = true
 
         while(this.execucao){
@@ -13,16 +15,14 @@ export default class EditarClienteTitular extends Processo{
 
             switch(this.opcao){
                 case 1:
-                    console.log('1');
+                    this.processo = new ListagemTitulares()
+                    this.processo.processar()
                     break
                 case 2:
-                    console.log('2');
-                    break
-                case 3:
-                    console.log('3');
+                    this.processo = new BuscarTitularPorDocumento()
+                    this.processo.processar()
                     break
                 case 0:
-                    console.log('0');
                     this.execucao = false
                     break
                 default:

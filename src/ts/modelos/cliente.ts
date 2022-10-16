@@ -30,5 +30,8 @@ export default class Cliente {
     public get Dependentes() { return this.dependentes }
     public get Titular() { return this.titular }
 
+    public set setNome(nome:string){ this.nome = nome }
+    public set setNomeSocial(nomeSocial:string){ this.nomeSocial = nomeSocial }
+    public set setDataNascimento(dataNascimento:Date){ this.dataNascimento = dataNascimento }
     public set Endereco(endereco: Endereco) { this.endereco = endereco }
 }

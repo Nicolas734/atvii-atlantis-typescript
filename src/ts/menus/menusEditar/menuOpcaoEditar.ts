@@ -2,7 +2,7 @@ import Menu from "../../interfaces/menu";
 
 export default class MenuOpcaoEditar implements Menu{
     mostrar(): void {
-        console.clear()
+        // console.clear()
         console.log(`****************************`)
         console.log(`| O que deseja atualizar? `)
         console.log(`----------------------`)

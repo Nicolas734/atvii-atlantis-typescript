@@ -27,6 +27,9 @@ export default class Principal extends Processo {
                 this.processo = new TipoListagemClientes()
                 this.processo.processar()
                 break
+            case 4:
+                console.log('em progresso');
+                break
             case 0:
                 this.execucao = false
                 console.log('Até logo!')

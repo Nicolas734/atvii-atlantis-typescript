@@ -15,7 +15,7 @@ O que está faltando ?
 
 - Dependente
 
-    - Criar
+    - Criar                             *Finalizado
     - Buscar todos
     - Buscar titular
     - Buscar por id

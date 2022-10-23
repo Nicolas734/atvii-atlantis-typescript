@@ -56,7 +56,7 @@ const listaClientes = [
     {
         "nome":"Nicolas",
         "nomeSocial":"Lima",
-        "dataNascimento": new Date(2003, 7 , 29),
+        "dataNascimento": new Date(2003, 7 -1, 29),
         "telefones":[
             {
                 "ddd": '(12)',
@@ -75,7 +75,7 @@ const listaClientes = [
             {
                 "numero":"123.456.789-10",
                 "tipo": TipoDocumento.CPF,
-                "dataExpedicao": new Date(2017, 3 , 1)
+                "dataExpedicao": new Date(2017, 3 -1, 1)
             }
         ],
         "dependentes":[],

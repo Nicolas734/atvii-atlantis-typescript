@@ -1,6 +1,7 @@
 import Processo from "../../abstracoes/processo";
 import MenuOpcaoEndereco from "../../menus/menusEditar/menuOpcaoEndereco";
 import Cliente from "../../modelos/cliente";
+import Endereco from "../../modelos/endereco";
 
 export default class EditarEnderecoCliente extends Processo{
     private cliente!:Cliente
@@ -44,6 +45,9 @@ export default class EditarEnderecoCliente extends Processo{
                     this.cliente.Endereco.setCodigoPostal = novoCep
                     break
                 case 0:
+                    this.cliente.Dependentes.forEach(dependente => {
+                        dependente.Endereco = this.cliente.Endereco.clonar() as Endereco
+                    })
                     this.execucao = false
                     break
                 default:

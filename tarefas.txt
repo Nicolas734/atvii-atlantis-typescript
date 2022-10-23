@@ -1,6 +1,6 @@
 Requisitos
 • CRUD de cliente, incluindo clientes dependentes.
-• Listagem de clientes dependentes para um titular específico.
+• Listagem de clientes dependentes para um titular específico.              *Finalizado
 • Listagem do titular para o cliente dependente específico.
 
 

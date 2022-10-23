@@ -11,7 +11,7 @@ O que está faltando ?
     - Buscar por id
     - buscar dependentes                *Finalizado
     - Editar                            *Finalizado
-    - Excluir
+    - Excluir                           *Finalizado
 
 - Dependente
 

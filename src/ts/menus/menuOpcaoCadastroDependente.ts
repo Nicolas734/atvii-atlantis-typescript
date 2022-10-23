@@ -6,7 +6,7 @@ export default class MenuOpcaoCadastroDependente implements Menu{
         console.log(`| Qual o tipo do cliente para cadastro? `)
         console.log(`----------------------`)
         console.log(`| 1 - Cadastrar um dependente`)
-        console.log(`| 2 - Cadastrar Uma Lista de Dependentes`)
+        console.log(`| 2 - Cadastrar multiplos Dependentes`)
         console.log(`----------------------`)
     }
 }

@@ -36,10 +36,10 @@ export default class CadastroDependente extends Processo{
 
             switch(opcao){
                 case 1:
-                    console.log('Iniciando cadastro do dependete');
-                    let nome = this.entrada.receberTexto('Qual o nome do dependete');
-                    let nomeSocial = this.entrada. receberTexto('QUal o noem social do dependete');
-                    let dataNascimento = this.entrada.receberData('Qual a data de nascimento do dependete');
+                    console.log('Iniciando cadastro do dependente');
+                    let nome = this.entrada.receberTexto('Qual o nome do dependente: ');
+                    let nomeSocial = this.entrada. receberTexto('QUal o nome social do dependente: ');
+                    let dataNascimento = this.entrada.receberData('Qual a data de nascimento do dependente');
                     this.dependente = new Cliente(nome, nomeSocial, dataNascimento)
 
                     this.processo = new CadastrarDocumentosCliente(this.dependente)
@@ -60,13 +60,13 @@ export default class CadastroDependente extends Processo{
 
 
                 case 2:
-                    console.log('Iniciando cadastro dos dependetes');
+                    console.log('Iniciando cadastro dos dependentes');
 
                     while(this.execucao){
 
-                        let nome = this.entrada.receberTexto('Qual o nome do dependete');
-                        let nomeSocial = this.entrada. receberTexto('QUal o noem social do dependete');
-                        let dataNascimento = this.entrada.receberData('Qual a data de nascimento do dependete');
+                        let nome = this.entrada.receberTexto('Qual o nome do dependente: ');
+                        let nomeSocial = this.entrada. receberTexto('QUal o nome social do dependente: ');
+                        let dataNascimento = this.entrada.receberData('Qual a data de nascimento do dependente');
                         this.dependente = new Cliente(nome, nomeSocial, dataNascimento)
 
                         this.processo = new CadastrarDocumentosCliente(this.dependente)
@@ -89,6 +89,8 @@ export default class CadastroDependente extends Processo{
 
                     }
                     console.log(titular);
+                    console.log('Finalizando o cadastros dos clientes dependentes ...')
+
                     break;
             }
         }

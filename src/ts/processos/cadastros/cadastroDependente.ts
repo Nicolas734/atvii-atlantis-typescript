@@ -31,7 +31,6 @@ export default class CadastroDependente extends Processo{
         }else{
 
             this.menu.mostrar()
-
             let opcao = this.entrada.receberNumero('Deseja cadastrar ')
 
             switch(opcao){
@@ -51,7 +50,7 @@ export default class CadastroDependente extends Processo{
                     }) || []
                     this.dependente.setTitular = titular
 
-                    titular.setDependentes = this.dependente
+                    titular.setDependente = this.dependente
                     this.clientes.push(this.dependente)
 
                     console.log('Finalizando o cadastro do cliente dependente ...')
@@ -78,7 +77,7 @@ export default class CadastroDependente extends Processo{
                         }) || []
                         this.dependente.setTitular = titular
 
-                        titular.setDependentes = this.dependente
+                        titular.setDependente = this.dependente
                         this.clientes.push(this.dependente)
 
                         let opcao = this.entrada.receberTexto('Deseja cadastrar outro dependente [SIM/NAO]: ')
@@ -88,7 +87,6 @@ export default class CadastroDependente extends Processo{
                         }
 
                     }
-                    console.log(titular);
                     console.log('Finalizando o cadastros dos clientes dependentes ...')
 
                     break;

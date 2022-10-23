@@ -9,7 +9,7 @@ O que está faltando ?
 - Cliente/Titular
 
     - Buscar por id
-    - buscar dependentes
+    - buscar dependentes                *Finalizado
     - Editar                            *Finalizado
     - Excluir
 
@@ -30,3 +30,8 @@ O que está faltando ?
 
     - Cadastrar cpf                     *Finalizado
     - Cadastrar passaporte              *Finalizado
+
+
+o que tem para ajustar ?
+
+- ao editar o titular ainda falta editar as informações dos dependentes

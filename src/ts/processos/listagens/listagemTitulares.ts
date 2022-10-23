@@ -7,10 +7,12 @@ import Cliente from "../../modelos/cliente";
 export default class ListagemTitulares extends Processo {
     private clientes: Cliente[]
     private impressor!: Impressor
+
     constructor() {
         super()
         this.clientes = Armazem.InstanciaUnica.Clientes
     }
+
     processar(): void {
         console.clear()
         console.log('Iniciando a listagem dos clientes titulares...')

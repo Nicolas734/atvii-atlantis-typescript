@@ -1,5 +1,6 @@
 import Processo from "../../abstracoes/processo"
 import MenuPrincipal from "../../menus/menuPricipal"
+import GerarClientes from "../../scripts/gerarClientes"
 import TipoCadastroCliente from "./tipoCadastroCliente"
 import TipoEditarCliente from "./tipoEditarCliente"
 import TipoListagemClientes from "./tipoListagemClientes"
@@ -30,6 +31,10 @@ export default class Principal extends Processo {
             case 4:
                 console.log('em progresso');
                 break
+            case 5:
+                this.processo = new GerarClientes()
+                this.processo.processar()
+                break;
             case 0:
                 this.execucao = false
                 console.log('Até logo!')

@@ -1,14 +1,12 @@
 import Processo from "../../abstracoes/processo";
 import Armazem from "../../dominio/armazem";
-import ImpressorCliente from "../../impressores/impressorCliente";
+import ImpressorDependente from "../../impressores/impressorDependente";
 import Impressor from "../../interfaces/impressor";
 import Cliente from "../../modelos/cliente";
-import Documento from "../../modelos/documento";
-import ListagemTitulares from "./listagemTitulares";
 
 export default class ListagemDependentes extends Processo{
-    private clientes:Cliente[]
-    private impressor!:Impressor
+    private clientes!:Cliente[]
+    private impressor!: Impressor
 
     constructor(){
         super()
@@ -16,25 +14,23 @@ export default class ListagemDependentes extends Processo{
     }
 
     processar(): void {
-
-        this.processo = new ListagemTitulares()
-        this.processo.processar()
-
-        let numeroDocumento = this.entrada.receberTexto('Digite o numero do documento do titular: ')
-        let titular = this.clientes.find(
-            (cliente:Cliente) => cliente.Documentos.find(
-            (documento:Documento ) => documento.Numero === numeroDocumento
-            ))
-
-        if(!titular){
-            console.log('Titular não encontrado.');
-        }else{
-            console.log(`\nListagem de dependentes do titular ${titular.Nome}\n`);
-            titular.Dependentes.forEach((dependente) => {
-                this.impressor = new ImpressorCliente(dependente)
-                console.log(this.impressor.imprimir());
-            })
-        }
+        
+        console.clear();
+        console.log("Iniciando a listagem dos clientes dependentes...");
+        this.clientes.forEach(dependente => {
+            if(this.titular(dependente)){
+                this.impressor = new ImpressorDependente(dependente)
+                console.log(this.impressor.imprimir())
+            }
+        })
     }
 
+    private titular(cliente: Cliente): boolean {
+        let verificacao = false
+        if (cliente.Titular != undefined) {
+            verificacao = true
+        }
+        return verificacao
+    }
+    
 }

@@ -1,10 +1,10 @@
-import Processo from "../../abstracoes/processo"
-import MenuPrincipal from "../../menus/menuPricipal"
-import GerarClientes from "../../scripts/gerarClientes"
-import TipoCadastroCliente from "./tipoCadastroCliente"
-import TipoEditarCliente from "./tipoEditarCliente"
-import TipoExcluirCliente from "./tipoExcluirCliente"
-import TipoListagemClientes from "./tipoListagemClientes"
+import Processo from "../abstracoes/processo"
+import MenuPrincipal from "../menus/menuPricipal"
+import GerarClientes from "../scripts/gerarClientes"
+import TipoCadastroCliente from "./menus/tipoCadastroCliente"
+import TipoEditarCliente from "./menus/tipoEditarCliente"
+import TipoExcluirCliente from "./menus/tipoExcluirCliente"
+import TipoListagemClientes from "./menus/tipoListagemClientes"
 
 export default class Principal extends Processo {
     constructor() {

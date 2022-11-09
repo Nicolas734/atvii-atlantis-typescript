@@ -29,13 +29,6 @@ export default class BuscarTitular extends Processo{
         })
 
         return this.titular
-    }
 
-    private verificarTitular(cliente: Cliente): boolean {
-        let verificacao = false
-        if (cliente.Titular == undefined) {
-            verificacao = true
-        }
-        return verificacao
     }
 }

@@ -1,7 +1,7 @@
 import Processo from "../abstracoes/processo"
 import MenuPrincipal from "../menus/menuPricipal"
 import GerarClientes from "../scripts/gerarClientes"
-import BuscarTitular from "./buscas/buscarTitular"
+import ListagemDependenteTitular from "./listagens/listagemDependenteTitular"
 import TipoCadastroCliente from "./menus/tipoCadastroCliente"
 import TipoEditarCliente from "./menus/tipoEditarCliente"
 import TipoExcluirCliente from "./menus/tipoExcluirCliente"
@@ -38,10 +38,6 @@ export default class Principal extends Processo {
                 this.processo = new GerarClientes()
                 this.processo.processar()
                 break;
-            case 6:
-                this.processo = new BuscarTitular()
-                this.processo.processar()
-                break
             case 0:
                 this.execucao = false
                 console.log('Até logo!')

@@ -1,7 +1,7 @@
 Requisitos
 • CRUD de cliente, incluindo clientes dependentes.
 • Listagem de clientes dependentes para um titular específico.              *Finalizado
-• Listagem do titular para o cliente dependente específico.
+• Listagem do titular para o cliente dependente específico.                 *Finalizado
 
 
 O que está faltando ?
@@ -17,7 +17,7 @@ O que está faltando ?
 
     - Criar                             *Finalizado
     - Buscar todos                      *Finalizado
-    - Buscar titular
+    - Buscar titular                    *Finalizado
     - Buscar por id
     - Editar
     - Excluir
@@ -34,5 +34,6 @@ O que está faltando ?
 
 o que tem para ajustar ?
 
-- ao editar o titular ainda falta editar as informações dos dependentes
-- ao excluir o titular é necessario excluir seus dependentes                    *Finalizado
+- ao editar o titular ainda falta editar as informações dos dependentes.
+- ao excluir o titular é necessario excluir seus dependentes.                    *Finalizado
+- criar um impressor personalizado para o retorno da listagem do titular para o cliente dependente específico.

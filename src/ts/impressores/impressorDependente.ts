@@ -20,7 +20,7 @@ export default class ImpressorDependente implements Impressor{
         + `| Data de nascimento: ${this.cliente.DataNascimento.toLocaleDateString()}\n`
         + `| Data de cadastro: ${this.cliente.DataCadastro.toLocaleDateString()}`
 
-        this.impressor = new ImpressorDocumentos(this.cliente.Titular.Documentos)
+        this.impressor = new ImpressorDocumentos(this.cliente.Documentos)
         impressao = impressao + `\n${this.impressor.imprimir()}\n`
 
         impressao = impressao + `| -- Titular -- \n`

@@ -16,7 +16,7 @@ O que está faltando ?
 - Dependente
 
     - Criar                             *Finalizado
-    - Buscar todos
+    - Buscar todos                      *Finalizado
     - Buscar titular
     - Buscar por id
     - Editar
@@ -35,4 +35,4 @@ O que está faltando ?
 o que tem para ajustar ?
 
 - ao editar o titular ainda falta editar as informações dos dependentes
-- ao excluir o titular é necessario excluir seus dependentes
+- ao excluir o titular é necessario excluir seus dependentes                    *Finalizado

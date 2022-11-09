@@ -24,7 +24,7 @@ export default class ListagemTitularDependentes extends Processo{
         let titular = this.clientes.find(
             (cliente:Cliente) => cliente.Documentos.find(
             (documento:Documento ) => documento.Numero === numeroDocumento
-            ))
+        ))
 
         if(!titular){
             console.log('Titular não encontrado.');

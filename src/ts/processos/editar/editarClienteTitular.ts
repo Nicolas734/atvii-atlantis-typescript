@@ -9,6 +9,7 @@ import BuscarTitular from "../buscas/buscarTitular";
 import Impressor from "../../interfaces/impressor";
 import ImpressorClienteDocumento from "../../impressores/impressorClienteDocumento";
 import ImpressorCliente from "../../impressores/impressorCliente";
+import AtualizarInformacoesDependentes from "./atualizadores/atualizarInformacoesDependentes";
 
 export default class EditarClienteTitular extends Processo{
     private impressor!: Impressor
@@ -56,6 +57,8 @@ export default class EditarClienteTitular extends Processo{
                     case 0:
                         this.execucao = false
                         this.impressor = new ImpressorCliente(this.titular)
+                        let atualizador = new AtualizarInformacoesDependentes(this.titular)
+                        atualizador.atualizar()
                         console.log(`Dados do titular atualizado com sucesso...\n`);
                         console.log(this.impressor.imprimir());
                         break

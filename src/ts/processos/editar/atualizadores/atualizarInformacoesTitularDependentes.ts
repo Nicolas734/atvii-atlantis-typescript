@@ -3,9 +3,8 @@ import Cliente from "../../../modelos/cliente";
 import Endereco from "../../../modelos/endereco";
 import Telefone from "../../../modelos/telefone";
 
-export default class AtualizarInformacoesDependentes{
+export default class AtualizarInformacoesTitularDependentes{
     private titular!:Cliente
-    private dependente!:Cliente
     private documentos:any[] = []
     private clientes!:Cliente[]
 
@@ -14,7 +13,7 @@ export default class AtualizarInformacoesDependentes{
         this.clientes = Armazem.InstanciaUnica.Clientes
     }
 
-    atualizar(){
+    atualizar():void{
         this.titular.Dependentes.forEach( dependente => {
             dependente.setTitular = this.titular
             dependente.Telefones.splice(0,dependente.Telefones.length)

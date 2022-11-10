@@ -1,12 +1,9 @@
 import Processo from "../../abstracoes/processo";
-import ImpressorCliente from "../../impressores/impressorCliente";
-import Impressor from "../../interfaces/impressor";
 import MenuOpcaoDadosCliente from "../../menus/menusEditar/menuOpcaoDadosCliente";
 import Cliente from "../../modelos/cliente";
 
 export default class EditarDadosCliente extends Processo{
     private cliente:Cliente
-
 
     constructor(cliente:Cliente){
         super()

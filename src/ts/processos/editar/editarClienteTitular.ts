@@ -1,6 +1,6 @@
 import Processo from "../../abstracoes/processo";
 import Cliente from "../../modelos/cliente";
-import MenuOpcaoEditar from '../../menus/menusEditar/menuOpcaoEditar';
+import MenuOpcaoTitularEditar from '../../menus/menusEditar/menuOpcaoTitularEditar';
 import EditarDadosCliente from "./editarDadosCliente";
 import EditarTelefoneCliente from "./editarTelefoneCliente";
 import EditarEnderecoCliente from "./editarEnderecoCliente";
@@ -8,6 +8,7 @@ import EditarDocumentoCliente from "./editarDocumentoCliente";
 import BuscarTitular from "../buscas/buscarTitular";
 import Impressor from "../../interfaces/impressor";
 import ImpressorClienteDocumento from "../../impressores/impressorClienteDocumento";
+import ImpressorCliente from "../../impressores/impressorCliente";
 
 export default class EditarClienteTitular extends Processo{
     private impressor!: Impressor
@@ -16,7 +17,7 @@ export default class EditarClienteTitular extends Processo{
 
     constructor(){
         super()
-        this.menu = new MenuOpcaoEditar()
+        this.menu = new MenuOpcaoTitularEditar()
         this.execucao = true
     }
 
@@ -54,6 +55,9 @@ export default class EditarClienteTitular extends Processo{
                         break
                     case 0:
                         this.execucao = false
+                        this.impressor = new ImpressorCliente(this.titular)
+                        console.log(`Dados do titular atualizado com sucesso...\n`);
+                        console.log(this.impressor.imprimir());
                         break
                     default:
                         console.log('Operação não entendida.');

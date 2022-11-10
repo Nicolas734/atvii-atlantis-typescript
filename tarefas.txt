@@ -19,7 +19,7 @@ O que está faltando ?
     - Buscar todos                      *Finalizado
     - Buscar titular                    *Finalizado
     - Buscar por id                     *Finalizado
-    - Editar
+    - Editar                            *Finalizado
     - Excluir
 
 - Telefone

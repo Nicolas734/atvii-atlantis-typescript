@@ -11,6 +11,8 @@ import ImpressorClienteDocumento from "../../impressores/impressorClienteDocumen
 
 export default class EditarClienteTitular extends Processo{
     private impressor!: Impressor
+    private titular!:Cliente
+    private busca:BuscarTitular = new BuscarTitular()
 
     constructor(){
         super()
@@ -20,13 +22,12 @@ export default class EditarClienteTitular extends Processo{
 
     processar(): void {
 
-        this.processo = new BuscarTitular()
-        let titular = this.processo.processar();
+        this.titular = this.busca.buscar();
 
-        if(titular === undefined){
+        if(this.titular === undefined){
             console.log("Titular não encontrado...");
         }else{
-            this.impressor = new ImpressorClienteDocumento(titular)
+            this.impressor = new ImpressorClienteDocumento(this.titular)
             console.log(this.impressor.imprimir())
 
             while(this.execucao){
@@ -36,19 +37,19 @@ export default class EditarClienteTitular extends Processo{
 
                 switch(this.opcao){
                     case 1:
-                        this.processo = new EditarDadosCliente(titular)
+                        this.processo = new EditarDadosCliente(this.titular)
                         this.processo.processar()
                         break
                     case 2:
-                        this.processo = new EditarTelefoneCliente(titular)
+                        this.processo = new EditarTelefoneCliente(this.titular)
                         this.processo.processar()
                         break
                     case 3:
-                        this.processo = new EditarEnderecoCliente(titular)
+                        this.processo = new EditarEnderecoCliente(this.titular)
                         this.processo.processar()
                         break
                     case 4:
-                        this.processo = new EditarDocumentoCliente(titular)
+                        this.processo = new EditarDocumentoCliente(this.titular)
                         this.processo.processar()
                         break
                     case 0:

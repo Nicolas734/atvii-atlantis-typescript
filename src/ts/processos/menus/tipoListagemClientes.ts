@@ -1,9 +1,11 @@
 import Processo from "../../abstracoes/processo";
 import MenuTipoListagemClientes from "../../menus/menuTipoListagemClientes";
+import ListagemDependentePorDocumento from "../listagens/listagemDependentePorDocumento";
 import ListagemDependentes from "../listagens/listagemDependentes";
 import ListagemDependenteTitular from "../listagens/listagemDependenteTitular";
 import ListagemTitularDependentes from "../listagens/listagemTitularDependentes";
 import ListagemTitulares from "../listagens/listagemTitulares";
+import ListagemTitularPorDocumento from "../listagens/listagemTitularPorDocumento";
 
 export default class TipoListagemClientes extends Processo {
     constructor(){
@@ -20,14 +22,22 @@ export default class TipoListagemClientes extends Processo {
                 this.processo.processar()
                 break;
             case 2:
+                this.processo = new ListagemTitularPorDocumento()
+                this.processo.processar()
+                break
+            case 3:
                 this.processo = new ListagemDependentes()
                 this.processo.processar()
                 break;
-            case 3:
+            case 4:
+                this.processo = new ListagemDependentePorDocumento()
+                this.processo.processar()
+                break;
+            case 5:
                 this.processo = new ListagemTitularDependentes()
                 this.processo.processar()
                 break;
-            case 4:
+            case 6:
                 this.processo = new ListagemDependenteTitular()
                 this.processo.processar()
                 break;

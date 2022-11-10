@@ -8,7 +8,7 @@ O que está faltando ?
 
 - Cliente/Titular
 
-    - Buscar por id
+    - Buscar por id                     *Finalizado
     - buscar dependentes                *Finalizado
     - Editar                            *Finalizado
     - Excluir                           *Finalizado
@@ -18,7 +18,7 @@ O que está faltando ?
     - Criar                             *Finalizado
     - Buscar todos                      *Finalizado
     - Buscar titular                    *Finalizado
-    - Buscar por id
+    - Buscar por id                     *Finalizado
     - Editar
     - Excluir
 
@@ -36,4 +36,4 @@ o que tem para ajustar ?
 
 - ao editar o titular ainda falta editar as informações dos dependentes.
 - ao excluir o titular é necessario excluir seus dependentes.                    *Finalizado
-- criar um impressor personalizado para o retorno da listagem do titular para o cliente dependente específico.
+- criar um impressor personalizado para o retorno da listagem do titular para o cliente dependente específico.                  *Finalizado

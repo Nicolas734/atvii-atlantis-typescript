@@ -1,22 +1,23 @@
 import Processo from "../../abstracoes/processo";
 import Armazem from "../../dominio/armazem";
+import Entrada from "../../io/entrada";
 import Cliente from "../../modelos/cliente";
 import Documento from "../../modelos/documento";
 import ListagemTitulares from "../listagens/listagemTitulares";
 
-export default class BuscarTitular extends Processo{
+export default class BuscarTitular{
     private titular!: Cliente
     private clientes!: Cliente[]
+    private entrada = new Entrada()
 
     constructor(){
-        super()
         this.clientes = Armazem.InstanciaUnica.Clientes
     }
 
-    processar(): Cliente {
+    buscar(): Cliente {
         
-        this.processo = new ListagemTitulares()
-        this.processo.processar()
+        let listagem = new ListagemTitulares()
+        listagem.processar()
         
         let numeroDocumento = this.entrada.receberTexto("Digite o numero do documento do titular desejado: ")
 

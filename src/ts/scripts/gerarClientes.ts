@@ -31,17 +31,29 @@ export default class GerarClientes extends Processo{
                 cliente.endereco.codigoPostal,
             )
             documentos = cliente.documentos.map(documento => { return new Documento(documento.numero, documento.tipo, documento.dataExpedicao) })
-            // if(cliente.dependentes.length){
-            //     dependentes = cliente.dependentes.map(dependente => { 
-            //         let novoDependente = new Cliente(dependente.nome,dependente.nomeSocial, dependente.DataNascimento)
-            //         novoDependente.setTelefones
-            //      })
-            // }
 
             objCliente.setTelefones = telefones
             objCliente.Endereco = endereco
             objCliente.setDocumentos = documentos
-            objCliente.setDependente
+
+            if(cliente.dependentes.length > 0){
+                cliente.dependentes.forEach(dependente => { 
+                    let novoDependente = new Cliente(dependente.nome,dependente.nomeSocial, dependente.dataNascimento)
+
+                    let documentos = dependente.documentos.map( documento => {
+                        return new Documento(documento.numero, documento.tipo, documento.dataExpedicao)
+                    })
+                    novoDependente.setDocumentos = documentos
+                    novoDependente.setTelefones = objCliente.Telefones.map(telefone => {
+                        return telefone.clonar() as Telefone
+                    }) || []
+                    novoDependente.Endereco = objCliente.Endereco.clonar() as Endereco
+                    novoDependente.setTitular = objCliente
+                    objCliente.setDependente = novoDependente
+                    this.clientes.push(novoDependente)
+                    
+                })
+            }
 
             this.clientes.push(objCliente)
         })
@@ -78,7 +90,20 @@ const listaClientes = [
                 "dataExpedicao": new Date(2017, 3 -1, 1)
             }
         ],
-        "dependentes":[],
+        "dependentes":[
+            {
+                "nome":"Lima",
+                "nomeSocial": "Nicolas",
+                "dataNascimento": new Date(2011, 11 -1, 11),
+                "documentos":[
+                    {
+                        "numero":"123",
+                        "tipo": TipoDocumento.RG,
+                        "dataExpedicao": new Date(2011, 11 -1, 11)
+                    }
+                ]
+            }
+        ],
         "titular": {}
     }
 ]

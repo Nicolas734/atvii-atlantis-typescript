@@ -21,7 +21,6 @@ export default class ExcluirTitular extends Processo {
         let indice = this.clientes.findIndex((cliente: Cliente) => cliente.Documentos.find((documento: Documento) => documento.Numero === numeroDocumento))
         let filtrados = this.clientes.filter(cliente => (cliente.Documentos.find((documento: Documento) => documento.Numero === numeroDocumento )));
         let documentos: any[]= []
-
         filtrados.forEach(element => {
             element.Dependentes.forEach(d => d.Documentos.forEach( doc => { documentos.push({ numero:doc.Numero }) }))
         });
@@ -40,10 +39,10 @@ export default class ExcluirTitular extends Processo {
         });
 
         if (indice === -1) {
-            console.log(`Titular não encontrado.`);
+            console.log(`Titular não encontrado...`);
         } else {
             this.clientes.splice(indice, 1)
-            console.log(`Titular com documento de numero ${numeroDocumento} excluido com sucessso`);
+            console.log(`Titular com documento de numero ${numeroDocumento} excluido com sucessso...`);
         }
 
     }

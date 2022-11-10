@@ -1,5 +1,6 @@
 import Processo from "../../abstracoes/processo";
 import MenuTipoExcluir from "../../menus/menuTipoExcluir";
+import ExcluirDependente from "../excluir/excluirDependente";
 import ExcluirTitular from "../excluir/excluirTitular";
 
 export default class TipoExcluirCliente extends Processo{
@@ -17,7 +18,8 @@ export default class TipoExcluirCliente extends Processo{
                 this.processo.processar()
                 break;
             case 2:
-                console.log('em progresso');
+                this.processo = new ExcluirDependente()
+                this.processo.processar()
                 break
             default:
                 console.log('Opção não entendida... :(')

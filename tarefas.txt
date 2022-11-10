@@ -1,5 +1,5 @@
 Requisitos
-• CRUD de cliente, incluindo clientes dependentes.
+• CRUD de cliente, incluindo clientes dependentes.                          *Finalizado
 • Listagem de clientes dependentes para um titular específico.              *Finalizado
 • Listagem do titular para o cliente dependente específico.                 *Finalizado
 
@@ -20,7 +20,7 @@ O que está faltando ?
     - Buscar titular                    *Finalizado
     - Buscar por id                     *Finalizado
     - Editar                            *Finalizado
-    - Excluir
+    - Excluir                           *Finalizado
 
 - Telefone
 

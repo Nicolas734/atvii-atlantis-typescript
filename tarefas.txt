@@ -35,6 +35,6 @@ O que está faltando ?
 o que tem para ajustar ?
 
 - ao editar o titular ainda falta editar as informações dos dependentes.                                                        *Finalizado
-- ao editar o dependente ainda falta editar as informações presentes dentro do titular.
+- ao editar o dependente ainda falta editar as informações presentes dentro do titular.                                         *Finalizado
 - ao excluir o titular é necessario excluir seus dependentes.                                                                   *Finalizado
 - criar um impressor personalizado para o retorno da listagem do titular para o cliente dependente específico.                  *Finalizado

@@ -1,11 +1,12 @@
 import Processo from "../../abstracoes/processo";
 import Armazem from "../../dominio/armazem";
+import Buscador from "../../interfaces/buscador";
 import Entrada from "../../io/entrada";
 import Cliente from "../../modelos/cliente";
 import Documento from "../../modelos/documento";
 import ListagemTitulares from "../listagens/listagemTitulares";
 
-export default class BuscarTitular{
+export default class BuscarTitular implements Buscador<Cliente>{
     private titular!: Cliente
     private clientes!: Cliente[]
     private entrada = new Entrada()
@@ -14,7 +15,7 @@ export default class BuscarTitular{
         this.clientes = Armazem.InstanciaUnica.Clientes
     }
 
-    buscar(): Cliente {
+    buscar() {
         
         let listagem = new ListagemTitulares()
         listagem.processar()

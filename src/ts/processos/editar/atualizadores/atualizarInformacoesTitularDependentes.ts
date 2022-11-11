@@ -1,9 +1,10 @@
 import Armazem from "../../../dominio/armazem";
+import Atualizador from "../../../interfaces/atualizador";
 import Cliente from "../../../modelos/cliente";
 import Endereco from "../../../modelos/endereco";
 import Telefone from "../../../modelos/telefone";
 
-export default class AtualizarInformacoesTitularDependentes{
+export default class AtualizarInformacoesTitularDependentes implements Atualizador{
     private titular!:Cliente
     private documentos:any[] = []
     private clientes!:Cliente[]

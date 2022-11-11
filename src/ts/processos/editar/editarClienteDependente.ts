@@ -4,6 +4,7 @@ import Impressor from "../../interfaces/impressor";
 import MenuOpcaoDependenteEditar from "../../menus/menusEditar/menuOpcaoDependenteEditar";
 import Cliente from "../../modelos/cliente";
 import BuscarDependente from "../buscas/buscarDependente";
+import AtualizarInformacoesDependenteTitular from "./atualizadores/atualizarInformacoesDependenteTitular";
 import EditarDadosCliente from "./editarDadosCliente";
 import EditarDocumentoCliente from "./editarDocumentoCliente";
 
@@ -42,6 +43,8 @@ export default class EditarClienteDependente extends Processo{
                     case 0:
                         this.execucao = false
                         this.impressor = new ImpressorDependente(this.dependente)
+                        let atualizador = new AtualizarInformacoesDependenteTitular(this.dependente)
+                        atualizador.atualizar()
                         console.log(`Dados do dependente atualizado com sucesso...\n`);
                         console.log(this.impressor.imprimir());
                         break

@@ -1,11 +1,12 @@
 import Processo from "../../abstracoes/processo";
 import Armazem from "../../dominio/armazem";
+import Buscador from "../../interfaces/buscador";
 import Entrada from "../../io/entrada";
 import Cliente from "../../modelos/cliente";
 import Documento from "../../modelos/documento";
 import ListagemDependentes from "../listagens/listagemDependentes";
 
-export default class BuscarDependente{
+export default class BuscarDependente implements Buscador<Cliente>{
     private clientes!:Cliente[]
     private dependente!:Cliente
     private entrada = new Entrada()
